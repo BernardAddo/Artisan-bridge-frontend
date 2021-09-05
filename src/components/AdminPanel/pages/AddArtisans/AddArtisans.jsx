@@ -38,7 +38,7 @@ export default function AddArtisans() {
 
     //Fetching artisans data from the database
     const fetchArtisans = () => {
-    fetch("https://artisan-bridge-data.herokuapp.com/admin/artisan_table")
+    fetch("http://127.0.0.1:5000/admin/artisan_table")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -59,7 +59,7 @@ export default function AddArtisans() {
   }, [refresh]);
 
   const handleDelete = (id) => {
-    fetch(`https://artisan-bridge-data.herokuapp.com/admin/artisans/edit/${id}`, {
+    fetch(`http://127.0.0.1:5000/admin/artisans/edit/${id}`, {
       method: "DELETE",
     })
       .then((response) => {

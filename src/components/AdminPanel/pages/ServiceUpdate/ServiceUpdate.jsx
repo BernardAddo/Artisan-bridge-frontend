@@ -45,7 +45,7 @@ export default function ServiceUpdate() {
 
   //Fetching the artisan details using the id
   const fetchServiceData = () => {
-    fetch(`https://artisan-bridge-data.herokuapp.com/admin/services/${serviceID}`)
+    fetch(`http://127.0.0.1:5000/admin/services/${serviceID}`)
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
@@ -69,7 +69,7 @@ export default function ServiceUpdate() {
       image_path: imageName ? imageName : service.image_path,
     };
 
-    fetch(`https://artisan-bridge-data.herokuapp.com/admin/services/${serviceID}`, {
+    fetch(`http://127.0.0.1:5000/admin/services/${serviceID}`, {
       method: "POST",
       body: JSON.stringify(userInput),
     })

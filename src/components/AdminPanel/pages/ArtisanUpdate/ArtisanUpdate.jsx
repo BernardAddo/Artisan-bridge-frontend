@@ -54,7 +54,7 @@ export default function ArtisanUpdate() {
 
   //Fetching the artisan details using the id
   const fetchArtisanData = () => {
-    fetch(`https://artisan-bridge-data.herokuapp.com/find_artisan/${artisanID}`)
+    fetch(`http://127.0.0.1:5000/find_artisan/${artisanID}`)
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
@@ -68,7 +68,7 @@ export default function ArtisanUpdate() {
 
   //fetching various services
   const fetchServices = () => {
-    fetch("https://artisan-bridge-data.herokuapp.com/services")
+    fetch("http://127.0.0.1:5000/services")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -100,7 +100,7 @@ export default function ArtisanUpdate() {
     };
 
     //Sending artisan update
-    fetch("https://artisan-bridge-data.herokuapp.com/admin/update/artisan/1055", {
+    fetch("http://127.0.0.1:5000/admin/update/artisan/1055", {
       method: "POST",
       body: JSON.stringify(userInput),
     })
