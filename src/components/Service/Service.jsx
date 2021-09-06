@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 export default function Service() {
   const [service, setService] = useState([]);
   const fetchService = () => {
-    fetch("http://127.0.0.1:5000/services")
+    fetch("https://artisan-bridge-data.herokuapp.com/services")
       .then((response) => response.json())
       .then((data) => {
         const dataList = Object.values(data);

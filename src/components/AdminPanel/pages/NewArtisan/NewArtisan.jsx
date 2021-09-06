@@ -39,7 +39,7 @@ export default function NewArtisan() {
 
   //fetching services from the database
   const fetchServices = () => {
-    fetch("http://127.0.0.1:5000/services")
+    fetch("https://artisan-bridge-data.herokuapp.com/services")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -76,7 +76,7 @@ export default function NewArtisan() {
       profile_image_path: imageName,
     };
 
-    fetch("http://127.0.0.1:5000/admin/artisans/edit/1000", {
+    fetch("https://artisan-bridge-data.herokuapp.com/admin/artisans/edit/1000", {
       method: "POST",
       body: JSON.stringify(userInput),
     })

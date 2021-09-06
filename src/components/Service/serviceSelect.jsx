@@ -12,7 +12,7 @@ export default function ServiceSelect() {
     const {service_id} = useParams();
     
     const fetchserviceSelect = () => {
-    fetch(`http://127.0.0.1:5000/service/${service_id}`)
+    fetch(`https://artisan-bridge-data.herokuapp.com/service/${service_id}`)
       .then((response) => response.json())
       .then((data) => {
        const dataList = Object.entries(data)

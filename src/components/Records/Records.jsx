@@ -13,7 +13,7 @@ export default function Records() {
 
   //Fetching the artisan details using the id
   const fetchRecordData = () => {
-    fetch(`http://127.0.0.1:5000/report/${localStorage.getItem("user")}`)
+    fetch(`https://artisan-bridge-data.herokuapp.com/report/${localStorage.getItem("user")}`)
       .then((response) => {
         setIsLoading(true);
         return response.json();

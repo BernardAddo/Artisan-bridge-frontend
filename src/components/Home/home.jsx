@@ -20,7 +20,7 @@ export default function Home() {
   const { url } = useRouteMatch();
 
   const fetchTopRatedArtisansData = () => {
-    fetch("http://127.0.0.1:5000/top_rated_artisans")
+    fetch("https://artisan-bridge-data.herokuapp.com/top_rated_artisans")
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   const fetchPopularservice = () => {
-    fetch("http://127.0.0.1:5000/popular_service")
+    fetch("https://artisan-bridge-data.herokuapp.com/popular_service")
       .then((response) => response.json())
       .then((data) => {
         setpopularService(data);

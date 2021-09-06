@@ -18,10 +18,10 @@ export default function Admin_register({ admin_Register }) {
     admin_Register(Admin_details);
 
     axios.defaults.headers.post["Access-Control-Allow-Origin"] =
-      "http://127.0.0.1:5000/register/admin";
+      "https://artisan-bridge-data.herokuapp.com/register/admin";
 
     axios
-      .post("http://127.0.0.1:5000/register/admin", Admin_details)
+      .post("https://artisan-bridge-data.herokuapp.com/register/admin", Admin_details)
       .then((response) => {
         console.log(response.data);
         if (response.data.Registration == "Registered, Administrator") {

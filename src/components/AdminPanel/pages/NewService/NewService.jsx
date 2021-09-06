@@ -47,7 +47,7 @@ export default function NewService() {
       image_path: imageName,
     };
 
-    fetch("http://127.0.0.1:5000/admin/services/0", {
+    fetch("https://artisan-bridge-data.herokuapp.com/admin/services/0", {
       method: "POST",
       body: JSON.stringify(userInput),
     })

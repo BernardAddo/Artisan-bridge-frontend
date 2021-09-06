@@ -24,7 +24,7 @@ const ArtisanSelect = () => {
 
   //Fetching the artisan details using the id
   const fetchArtisanData = () => {
-    fetch(`http://127.0.0.1:5000/find_artisan/${artisanId}`)
+    fetch(`https://artisan-bridge-data.herokuapp.com/find_artisan/${artisanId}`)
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
@@ -45,7 +45,7 @@ const ArtisanSelect = () => {
   //request handelr
   const requestHandler = () => {
     //sending data to the backend
-    fetch(`http://127.0.0.1:5000/confirm_order/${artisanId}/${userId}`)
+    fetch(`https://artisan-bridge-data.herokuapp.com/confirm_order/${artisanId}/${userId}`)
       .then((response) => {
         if (response.ok) {
           return response;

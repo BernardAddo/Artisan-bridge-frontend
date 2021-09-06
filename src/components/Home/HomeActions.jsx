@@ -1,6 +1,6 @@
 export const fetchTopRatedArtisans = async () => {
   const fetchfunc =async () => {
-    fetch("http://127.0.0.1:5000/top_rated_artisans")
+    fetch("https://artisan-bridge-data.herokuapp.com/top_rated_artisans")
       .then((response) => {
         if (response.ok) {
           return response.json();

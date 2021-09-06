@@ -60,7 +60,7 @@ const SignUp = () => {
       password: formData.password,
     };
 
-    fetch("http://127.0.0.1:5000/register", {
+    fetch("https://artisan-bridge-data.herokuapp.com/register", {
       method: "POST",
       body: JSON.stringify(userInput),
     })

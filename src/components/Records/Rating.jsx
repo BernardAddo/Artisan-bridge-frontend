@@ -9,7 +9,7 @@ export default function Star({ recordID, artisanID, recordRating }) {
 
   const rateHandler = () => {
     fetch(
-      `http://127.0.0.1:5000/rating/${recordID}/${artisanID}/${parseFloat(
+      `https://artisan-bridge-data.herokuapp.com/rating/${recordID}/${artisanID}/${parseFloat(
         rating
       ).toFixed(1)}`
     ).then((response) => {

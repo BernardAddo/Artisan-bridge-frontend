@@ -12,7 +12,7 @@ const Status = ({ recordID, setShowRating, recordStatus }) => {
     } else if (tranStatus == "cancel") {
       var status = 1;
     }
-    fetch(`http://127.0.0.1:5000/record_status/${recordID}/${status}`).then(
+    fetch(`https://artisan-bridge-data.herokuapp.com/record_status/${recordID}/${status}`).then(
       (response) => {
         if (response.ok) {
           return;

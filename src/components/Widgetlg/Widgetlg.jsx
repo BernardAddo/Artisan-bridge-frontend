@@ -5,7 +5,7 @@ export default function Widgetsm() {
   const [refreshKey, setRefreshKey] = useState(0);
 
   const fetchRecordsData = () => {
-    fetch("http://127.0.0.1:5000/admin/report/0")
+    fetch("https://artisan-bridge-data.herokuapp.com/admin/report/0")
       .then((response) => {
         if (response.ok) {
           return response.json();

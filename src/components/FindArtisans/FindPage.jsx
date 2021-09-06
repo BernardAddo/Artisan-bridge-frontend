@@ -10,7 +10,7 @@ const FindPage = () => {
   const [refreshKey, setRefreshKey] = useState(0);
 
   const fetchArtisansData = () => {
-    fetch("http://127.0.0.1:5000/find_artisan")
+    fetch("https://artisan-bridge-data.herokuapp.com/find_artisan")
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);

@@ -64,7 +64,7 @@ const Login = () => {
     };
 
     //Verifying credentials with the server
-    fetch("http://127.0.0.1:5000/login", {
+    fetch("https://artisan-bridge-data.herokuapp.com/login", {
       method: "POST",
       body: JSON.stringify(userInput),
     })
